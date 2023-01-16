@@ -1,4 +1,4 @@
-# Simple Pytorch
+# Dynamic Neural Network Library with Tape-based Autodiff
 ## Requirements
 - Python 3.8
 

@@ -64,8 +64,8 @@ def backpropagate(variable: Variable, deriv: Any) -> None:
             var.accumulate_derivative(var_deriv)
         else:
             for back_var, back_deriv in var.chain_rule(var_deriv):
-                back_var_deriv = var_dict.get(back_var.unique_id, 0)
-                var_dict[back_var.unique_id] = back_var_deriv + back_deriv
+                curr_deriv = var_dict.get(back_var.unique_id, 0)
+                var_dict[back_var.unique_id] = curr_deriv + back_deriv
 
 
 @dataclass
